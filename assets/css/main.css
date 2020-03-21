@@ -2061,6 +2061,10 @@ header.major p {
     font-style: normal;
 }
 
+header.major hr {
+    margin: 1em 0;
+}
+
 /* Form */
 
 form {
@@ -3448,10 +3452,6 @@ body.landing #main {
         display: none;
     }
 
-    header.major {
-        padding: 0 4em;
-    }
-
     /* Box */
 
     .box {
@@ -3677,17 +3677,6 @@ body.landing #main {
         font-size: 1em;
     }
 
-    /* Section/Article */
-
-    header.major {
-        padding: 1em;
-    }
-
-    header.major h2, header.major p {
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-    }
-
     /* Box */
 
     .box {
@@ -3799,12 +3788,6 @@ body.landing #main {
 
     body, input, select, textarea {
         font-size: 11pt;
-    }
-
-    /* Section/Article */
-
-    header.major {
-        padding: 0;
     }
 
     /* List */
