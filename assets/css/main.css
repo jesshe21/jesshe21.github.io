@@ -2518,6 +2518,10 @@ ul.alt li:first-child {
     padding-top: 0;
 }
 
+ul.alt .row {
+    justify-content: space-between;
+}
+
 ul.icons {
     cursor: default;
     list-style: none;
@@ -3487,8 +3491,6 @@ body.landing #main {
         display: none;
     }
 
-    /* Banner */
-
     /* Nav */
 
     #page-wrapper {
@@ -3822,6 +3824,10 @@ body.landing #main {
 
     ul.actions.small li:first-child {
         padding-top: 0;
+    }
+
+    ul.alt .row {
+        flex-direction: column;
     }
 
     /* Box */
