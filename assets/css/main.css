@@ -2012,10 +2012,6 @@ code {
 
 /* Section/Article */
 
-section.special, article.special {
-    text-align: center;
-}
-
 header p {
     color: #999;
     position: relative;
