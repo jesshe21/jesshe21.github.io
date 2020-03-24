@@ -2016,14 +2016,14 @@ header p {
     color: #999;
     position: relative;
     margin: 0 0 1.5em 0;
-    font-style: italic;
+    font-style: normal;
 }
 
-header h2 + p {
+/* header h2 + p {
     font-size: 1.25em;
     margin-top: -1em;
     line-height: 1.5em;
-}
+} */
 
 header h3 + p {
     font-size: 1.1em;
