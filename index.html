@@ -82,6 +82,22 @@ description: Welcome to Jessica's website!
                     {% endfor %}
                 </ul>
                 <header>
+                    <h3>Projects</h3>
+                </header>
+                <ul class="alt">
+                    {% for project in site.data.projects %}
+                    <li>
+                        <div class="row">
+                            <span><b>{{ project.client }}</b></span>
+                        </div>
+                        <div class="row">
+                            <span><i>{{ project.name }}</i></span>
+                            <span>{{ project.date }}</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <header>
                     <h3>Leadership & Extracurriculars</h3>
                 </header>
                 <ul class="alt">
