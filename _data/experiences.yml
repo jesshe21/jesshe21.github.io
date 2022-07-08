@@ -1,7 +1,11 @@
+- org: Bolt Financial
+  position: Strategic Finance
+  location: San Francisco, CA
+  date: May 2022 - Present
 - org: Goldman Sachs & Co.
   position: Investment Banking Analyst, TMT
   location: San Francisco, CA
-  date: Jul 2021 - Present
+  date: Jul 2021 - Apr 2022
 - org: Tesla Inc.
   position: Industrial Engineering (Supply Chain) Intern
   location: Palo Alto, CA
@@ -13,15 +17,15 @@
 - org: Visa Inc.
   position: Financial Analyst Intern
   location: Foster City, CA
-  date: May 2019 – Aug 2019
+  date: May 2019 – Aug 201  9
 - org: Alpine Software Group
   position: Corporate Development Intern
   location: Walnut Creek, CA
   date: Feb 2019 – May 2019
-- org: Ford Motor Company
-  position: Contract Strategy Consultant
-  location: Palo Alto, CA
-  date: Jan 2019 – May 2019
+# - org: Ford Motor Company
+#   position: Contract Strategy Consultant
+#   location: Palo Alto, CA
+#   date: Jan 2019 – May 2019
 # - org: The Economist
 #   position: Campus Ambassador
 #   location: Berkeley, CA
