@@ -6,147 +6,160 @@ description: Welcome to Jessica's website!
 <!DOCTYPE HTML>
 <html>
 {% include head.html %}
-<body class="landing is-preload">
+<body class="modern">
     <div id="page-wrapper">
-
-        <!-- Header -->
         {% include header.html %}
-
-        <!-- Banner -->
-        <section id="banner">
-            <h2>Hi, I'm Jessica!</h2>
-            <p>Welcome to my website</p>
-        </section>
-
-        <!-- Main -->
-        <section id="main" class="container">
-
-            <section class="box">
-                <header>
-                    <h2>About Me</h2>
-                    <p>I grew up in the cozy town of Rochester, MN, sandwiched between Mayo Clinic and IBM—the two recognizable names within 50 miles. With my mom working in medical research at Mayo and my dad working as an engineer at IBM, I knew I had to explore something different. After high school, I moved 1,800 miles away to attend college at Berkeley.</p>
-
-                    <p>Of my experiences at Berkeley, I particularly enjoyed teaching a semester-long origami course, interning abroad in Ireland, and bombarding Sproul Plaza passersby with free Exo cricket bars and magazines as a campus ambassador for The Economist. I also joined several student organizations that jointly gave me both a dependable circle of friends and an opportunity to explore disparate career paths.</p>
-
-                    <p>Since Berkeley, I've been working in finance in San Francisco. If you’d like to hop on a call or meet for coffee, I would love to hear from you! You can reach me via email at jesshe21@berkeley.edu or use the contact form on this site.</p>
-                </header>
-            </section>
-            <section class="box">
-                <div class="row gtr-uniform gtr-50">
-                    <div class="col-6">
-                        <span class="image fit"><img src="images/grad-pic.jpg" alt="" /></span>
+        <main class="page-content">
+            <section class="hero">
+                <div class="container hero-grid">
+                    <div class="hero-content">
+                        <span class="eyebrow">Jessica He</span>
+                        <h1>Investor, builder, and lifelong learner.</h1>
+                        <p>I help ideas grow. From teaching origami workshops to guiding teams through complex financial landscapes, I bring curiosity, empathy, and focus to every collaboration.</p>
+                        <div class="hero-actions">
+                            <a class="button primary" href="/contact">Let's connect</a>
+                            <a class="button ghost" href="#resume">View my experience</a>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <span class="image fit"><img src="images/greece.jpg" alt="" /></span>
+                    <div class="hero-image">
+                        <div class="image-frame">
+                            <img src="images/grad-pic.jpg" alt="Jessica He" />
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="box">
-                <header class="major">
-                    <h2>Resume</h2>
-                    <hr>
-                </header>
-                <header>
-                    <h3>Education</h3>
-                </header>
-                <ul class="alt">
-                    {% for education in site.data.educations %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ education.school }}</b></span>
+
+            <section class="section about" id="about">
+                <div class="container split">
+                    <div class="section-copy">
+                        <h2>My story</h2>
+                        <p>I grew up in Rochester, MN—nestled between Mayo Clinic and IBM. Surrounded by research and engineering, I carved out my own path by leaning into creative problem solving and community building.</p>
+                        <p>After moving 1,800 miles to attend UC Berkeley, I fell in love with teaching, cultural exchange, and the thrill of building something meaningful from scratch. Since then I've been based in San Francisco, working in finance and partnering with people who are shaping what's next.</p>
+                        <p>If you’d like to hop on a call or meet for coffee, I’d love to connect.</p>
+                    </div>
+                    <div class="section-panel">
+                        <div class="panel">
+                            <h3>What drives me</h3>
+                            <p>Exploration, inclusive leadership, and helping teams transform bold ideas into tangible progress.</p>
                         </div>
-                        <div class="row">
-                            <span><i>{{ education.degree }}</i></span>
-                            <span>{{ education.date }}</span>
+                        <div class="panel">
+                            <h3>Currently</h3>
+                            <p>Working in finance in San Francisco and always eager to collaborate on purposeful projects.</p>
                         </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <header>
-                    <h3>Professional Experience</h3>
-                </header>
-                <ul class="alt">
-                    {% for experience in site.data.experiences %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ experience.org }}</b></span>
-                            <span><b>{{ experience.location }}</b></span>
-                        </div>
-                        <div class="row">
-                            <span><i>{{ experience.position }}</i></span>
-                            <span>{{ experience.date }}</span>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <!-- <header>
-                    <h3>Projects</h3>
-                </header>
-                <ul class="alt">
-                    {% for project in site.data.projects %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ project.client }}</b></span>
-                        </div>
-                        <div class="row">
-                            <span><i>{{ project.name }}</i></span>
-                            <span>{{ project.date }}</span>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul> -->
-                <!-- <header>
-                    <h3>Leadership & Extracurriculars</h3>
-                </header>
-                <ul class="alt">
-                    {% for extra in site.data.extras %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ extra.org }}</b></span>
-                            <span><b>{{ extra.location }}</b></span>
-                        </div>
-                        <div class="row">
-                            <span><i>{{ extra.position }}</i></span>
-                            <span>{{ extra.date }}</span>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul> -->
-                <header>
-                    <h3>Awards</h3>
-                </header>
-                <ul class="alt">
-                    {% for award in site.data.awards %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ award.name }}</b></span>
-                            <span>{{ award.date }}</span>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <header>
-                    <h3>Interests</h3>
-                </header>
-                <ul class="alt">
-                    {% for interest in site.data.interests %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ interest.name }}</b></span>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
+                        <a class="panel link" href="mailto:jesshe21@berkeley.edu">jesshe21@berkeley.edu</a>
+                    </div>
+                </div>
             </section>
 
-        </section>
+            <section class="section resume" id="resume">
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="eyebrow">Experience</span>
+                        <h2>Highlights from my journey</h2>
+                        <p>A snapshot of the places, people, and ideas that have shaped me.</p>
+                    </div>
+                    <div class="resume-grid">
+                        <div class="resume-card">
+                            <h3>Education</h3>
+                            <ul class="timeline">
+                                {% for education in site.data.educations %}
+                                <li>
+                                    <div class="timeline-title">{{ education.school }}</div>
+                                    <div class="timeline-meta">
+                                        <span>{{ education.degree }}</span>
+                                        <span>{{ education.date }}</span>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="resume-card">
+                            <h3>Professional Experience</h3>
+                            <ul class="timeline">
+                                {% for experience in site.data.experiences %}
+                                <li>
+                                    <div class="timeline-title">{{ experience.org }} <span class="location">{{ experience.location }}</span></div>
+                                    <div class="timeline-meta">
+                                        <span>{{ experience.position }}</span>
+                                        <span>{{ experience.date }}</span>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="resume-card">
+                            <h3>Awards</h3>
+                            <ul class="timeline">
+                                {% for award in site.data.awards %}
+                                <li>
+                                    <div class="timeline-title">{{ award.name }}</div>
+                                    <div class="timeline-meta">
+                                        <span>{{ award.date }}</span>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="resume-card">
+                            <h3>Interests</h3>
+                            <ul class="pill-list">
+                                {% for interest in site.data.interests %}
+                                <li>{{ interest.name }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Footer -->
+            <section class="section highlights">
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="eyebrow">Moments I loved</span>
+                        <h2>Snapshots of curiosity in motion</h2>
+                    </div>
+                    <div class="highlight-grid">
+                        <article class="highlight-card">
+                            <h3>Teaching origami at Berkeley</h3>
+                            <p>Designing lesson plans, translating complex folds, and watching students discover the joy of making something with their hands.</p>
+                        </article>
+                        <article class="highlight-card">
+                            <h3>Working abroad in Ireland</h3>
+                            <p>Immersing in a new culture and learning how different perspectives unlock more resilient solutions.</p>
+                        </article>
+                        <article class="highlight-card">
+                            <h3>Championing new ideas on campus</h3>
+                            <p>From sharing cricket bars to hosting events, I love connecting people with experiences that challenge the status quo.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section gallery">
+                <div class="container gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/grad-pic.jpg" alt="Graduation" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/greece.jpg" alt="Jessica in Greece" />
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta">
+                <div class="container cta-content">
+                    <div>
+                        <h2>Let’s build what’s next.</h2>
+                        <p>I’m always open to new conversations, collaborations, and ideas.</p>
+                    </div>
+                    <a class="button primary" href="/contact">Start a conversation</a>
+                </div>
+            </section>
+        </main>
+
         {% include footer.html %}
-
     </div>
 
-    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -154,6 +167,5 @@ description: Welcome to Jessica's website!
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
 </body>
 </html>
