@@ -5,57 +5,64 @@ description: Use this form to shoot me a message!
 ---
 <!DOCTYPE HTML>
 <html>
-    {% include head.html %}
-	<body class="is-preload">
-		<div id="page-wrapper">
-
-			<!-- Header -->
-            {% include header.html %}
-
-			<!-- Main -->
-            <section id="main" class="container medium">
-                <header>
-                    <h2>Contact Me</h2>
-                    <p>Use this form to shoot me a message!</p>
-                </header>
-                <div class="box">
-                    <form method="post" action="https://formspree.io/xgeznrgp">
-                        <div class="row gtr-50 gtr-uniform">
-                            <div class="col-6 col-12-mobilep">
-                                <input type="text" name="name" id="name" value="" placeholder="Name" />
-                            </div>
-                            <div class="col-6 col-12-mobilep">
-                                <input type="email" name="email" id="email" value="" placeholder="Email" />
-                            </div>
-                            <div class="col-12">
-                                <input type="text" name="subject" id="subject" value="" placeholder="Subject" />
-                            </div>
-                            <div class="col-12">
-                                <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <ul class="actions special">
-                                    <li><input type="submit" value="Send Message" /></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </form>
+{% include head.html %}
+<body class="modern">
+    <div id="page-wrapper">
+        {% include header.html %}
+        <main class="page-content page-content--narrow">
+            <section class="hero hero--sub">
+                <div class="container hero-grid">
+                    <div class="hero-content">
+                        <span class="eyebrow">Contact</span>
+                        <h1>Let’s connect.</h1>
+                        <p>Whether you want to collaborate, chat about an idea, or just say hello, I’d love to hear from you.</p>
+                    </div>
                 </div>
             </section>
 
-			<!-- Footer -->
-            {% include footer.html %}
+            <section class="section simple contact-section">
+                <div class="container">
+                    <div class="section-heading">
+                        <h2>Send a note</h2>
+                        <p>Fill out the form below and I’ll get back to you as soon as I can. You can also reach me directly at <a href="mailto:jesshe21@berkeley.edu">jesshe21@berkeley.edu</a>.</p>
+                    </div>
+                    <div class="contact-card">
+                        <form class="contact-form" method="post" action="https://formspree.io/xgeznrgp">
+                            <div class="field-grid">
+                                <div>
+                                    <label class="sr-only" for="name">Name</label>
+                                    <input type="text" name="name" id="name" placeholder="Name" required />
+                                </div>
+                                <div>
+                                    <label class="sr-only" for="email">Email</label>
+                                    <input type="email" name="email" id="email" placeholder="Email" required />
+                                </div>
+                            </div>
+                            <div>
+                                <label class="sr-only" for="subject">Subject</label>
+                                <input type="text" name="subject" id="subject" placeholder="Subject" />
+                            </div>
+                            <div>
+                                <label class="sr-only" for="message">Message</label>
+                                <textarea name="message" id="message" placeholder="Enter your message" rows="6" required></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="button primary">Send message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        {% include footer.html %}
+    </div>
 
-		</div>
-
-		<!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.dropotron.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-
-	</body>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
