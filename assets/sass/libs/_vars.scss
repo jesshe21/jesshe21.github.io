@@ -20,63 +20,63 @@
 
 // Font.
 	$font: (
-		family:				('Source Sans Pro', sans-serif),
+		family:				(-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif),
 		family-fixed:		monospace,
-		weight:				300,
-		weight-bold:		400,
+		weight:				400,
+		weight-bold:		600,
 	);
 
 // Palette.
 	$palette: (
-		bg:					#f5f5f5,
-		fg:					#777,
-		fg-bold:			#646464,
-		fg-light:			#999,
-		border:				#e5e5e5,
-		border-bg:			#f8f8f8,
-		border2:			#dddddd,
-		border2-bg:			#f0f0f0,
+		bg:					#ffffff,
+		fg:					#1a1a1a,
+		fg-bold:			#000000,
+		fg-light:			#666666,
+		border:				#e0e0e0,
+		border-bg:			#fafafa,
+		border2:			#cccccc,
+		border2-bg:			#f5f5f5,
 
 		header: (
-			bg:				#444,
-			fg:				#bbb,
-			fg-bold:		#fff,
-			fg-light:		#999
+			bg:				#ffffff,
+			fg:				#666666,
+			fg-bold:		#000000,
+			fg-light:		#999999
 		),
 
 		accent1: (
-			bg:				#666,
-			fg:				mix(#666, #ffffff, 25%),
+			bg:				#000000,
+			fg:				mix(#000000, #ffffff, 25%),
 			fg-bold:		#ffffff,
-			fg-light:		mix(#666, #ffffff, 40%)
+			fg-light:		mix(#000000, #ffffff, 40%)
 		),
 
 		accent2: (
-			bg:				#e89980,
-			fg:				mix(#e89980, #ffffff, 25%),
+			bg:				#000000,
+			fg:				mix(#000000, #ffffff, 25%),
 			fg-bold:		#ffffff,
-			fg-light:		mix(#e89980, #ffffff, 40%)
+			fg-light:		mix(#000000, #ffffff, 40%)
 		),
 
 		accent3: (
-			bg:				#7fcdb8,
-			fg:				mix(#7fcdb8, #ffffff, 25%),
-			fg-bold:		#ffffff,
-			fg-light:		mix(#7fcdb8, #ffffff, 40%)
+			bg:				#f5f5f5,
+			fg:				mix(#1a1a1a, #ffffff, 25%),
+			fg-bold:		#000000,
+			fg-light:		mix(#1a1a1a, #ffffff, 40%)
 		),
 
 		accent4: (
-			bg:				#90b0ba,
-			fg:				mix(#90b0ba, #ffffff, 25%),
+			bg:				#000000,
+			fg:				mix(#000000, #ffffff, 25%),
 			fg-bold:		#ffffff,
-			fg-light:		mix(#90b0ba, #ffffff, 40%)
+			fg-light:		mix(#000000, #ffffff, 40%)
 		),
 
 		accent5: (
-			bg:				#e5cb95,
-			fg:				mix(#e5cb95, #ffffff, 25%),
-			fg-bold:		#ffffff,
-			fg-light:		mix(#e5cb95, #ffffff, 40%)
+			bg:				#f9f9f9,
+			fg:				mix(#1a1a1a, #ffffff, 25%),
+			fg-bold:		#000000,
+			fg-light:		mix(#1a1a1a, #ffffff, 40%)
 		)
 
 	);

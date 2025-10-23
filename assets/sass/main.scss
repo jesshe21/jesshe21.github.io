@@ -131,20 +131,20 @@
 	body, input, select, textarea {
 		color: _palette(fg);
 		font-family: _font(family);
-		font-size: 16pt;
+		font-size: 18px;
 		font-weight: _font(weight);
-		line-height: 1.65em;
-		letter-spacing: -0.015em;
+		line-height: 1.7em;
+		letter-spacing: -0.01em;
 	}
 
 	a {
-		@include vendor('transition', ('color #{_duration(transition)} ease-in-out', 'border-bottom-color #{_duration(transition)} ease-in-out'));
-		border-bottom: dotted 1px;
-		color: _palette(accent2, bg);
+		@include vendor('transition', ('color #{_duration(transition)} ease-in-out'));
+		border-bottom: none;
+		color: _palette(fg-bold);
 		text-decoration: none;
 
 		&:hover {
-			border-bottom-color: transparent;
+			color: _palette(fg-light);
 		}
 	}
 
@@ -174,15 +174,17 @@
 	}
 
 	h2 {
-		font-size: 2.25em;
-		line-height: 1.5em;
-		letter-spacing: -0.035em;
+		font-size: 3em;
+		line-height: 1.2em;
+		letter-spacing: -0.04em;
+		font-weight: _font(weight-bold);
 	}
 
 	h3 {
-		font-size: 1.75em;
-		line-height: 1.5em;
-		letter-spacing: -0.025em;
+		font-size: 2em;
+		line-height: 1.3em;
+		letter-spacing: -0.03em;
+		font-weight: _font(weight-bold);
 	}
 
 	h4 {
@@ -569,11 +571,11 @@
 	$box-padding: 3em;
 
 	.box {
-		background: #fff;
-		border-radius: _size(border-radius);
-		box-shadow: 0 2px 0 0 _palette(border);
-		margin: 0 0 _size(element-margin) 0;
-		padding: $box-padding;
+		background: transparent;
+		border-radius: 0;
+		box-shadow: none;
+		margin: 0 0 _size(element-margin) * 2 0;
+		padding: $box-padding 0;
 
 		> :last-child {
 			margin-bottom: 0;
@@ -583,7 +585,7 @@
 			background: none !important;
 			border-radius: 0 !important;
 			box-shadow: none !important;
-			margin: 0 0 _size(element-margin) 0;
+			margin: 0 0 _size(element-margin) * 2 0;
 			padding: 0 !important;
 		}
 
@@ -818,8 +820,8 @@
 			padding-left: 0;
 
 			li {
-				border-top: solid 1px _palette(border);
-				padding: 0.5em 0;
+				border-top: none;
+				padding: 1em 0;
 
 				&:first-child {
 					border-top: 0;
@@ -1128,7 +1130,7 @@
 /* Header */
 
 	#page-wrapper {
-		padding-top: 3em;
+		padding-top: 4em;
 	}
 
 	body.landing {
@@ -1143,16 +1145,18 @@
 	}
 
 	#header {
-		background: _palette(header, bg);
+		background: rgba(255, 255, 255, 0.98);
 		color: _palette(header, fg);
 		cursor: default;
-		height: 3.25em;
+		height: 4em;
 		left: 0;
-		line-height: 3.25em;
+		line-height: 4em;
 		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 10000;
+		border-bottom: 1px solid _palette(border);
+		backdrop-filter: blur(10px);
 
 		h1 {
 			color: inherit;
@@ -1370,14 +1374,14 @@
 /* Banner */
 
 	#banner {
-		background-attachment:	scroll,							fixed;
-		background-color:		#666;
-		background-image:		url('../../images/overlay.png'),		url('../../images/banner.jpg');
-		background-position:	top left,						center center;
-		background-repeat:		repeat,							no-repeat;
-		background-size:		auto,							cover;
-		color: #fff;
-		padding: 12em 0 20em 0;
+		background-attachment:	scroll;
+		background-color:		#ffffff;
+		background-image:		none;
+		background-position:	center center;
+		background-repeat:		no-repeat;
+		background-size:		cover;
+		color: _palette(fg-bold);
+		padding: 14em 0 12em 0;
 		text-align: center;
 
 		:last-child {
@@ -1385,41 +1389,46 @@
 		}
 
 		h2, h3, h4, h5, h6 {
-			color: #fff;
+			color: _palette(fg-bold);
 		}
 
 		h2 {
-			font-size: 3.5em;
-			line-height: 1em;
-			margin: 0 0 0.5em 0;
+			font-size: 4.5em;
+			line-height: 1.1em;
+			margin: 0 0 0.3em 0;
 			padding: 0;
+			font-weight: _font(weight-bold);
+			letter-spacing: -0.04em;
 		}
 
 		p {
-			font-size: 1.25em;
+			font-size: 1.5em;
 			margin-bottom: 1.75em;
+			color: _palette(fg-light);
+			font-weight: _font(weight);
 		}
 
 		input[type="submit"],
 		input[type="reset"],
 		input[type="button"],
 		.button {
-			background-color: transparent;
-			box-shadow: inset 0 0 0 2px rgba(255,255,255,0.5);
+			background-color: _palette(accent1, bg);
+			box-shadow: none;
 			color: #fff;
 			min-width: 12em;
+			border-radius: 0;
 
 			&:hover {
-				background-color: rgba(255,255,255,0.1);
+				background-color: _palette(fg-light);
 			}
 
 			&:active {
-				background-color: rgba(255,255,255,0.2);
+				background-color: _palette(fg-bold);
 			}
 
 			&.primary {
-				background: #fff;
-				color: #666 !important;
+				background: _palette(accent1, bg);
+				color: #fff !important;
 			}
 		}
 	}
