@@ -6,49 +6,47 @@ description: Use this form to shoot me a message!
 <!DOCTYPE HTML>
 <html>
     {% include head.html %}
-	<body class="is-preload">
-		<div id="page-wrapper">
+    <body class="modern">
+        <div id="page-wrapper">
 
-			<!-- Header -->
             {% include header.html %}
 
-			<!-- Main -->
-            <section id="main" class="container medium">
-                <header>
-                    <h2>Contact Me</h2>
-                    <p>Use this form to shoot me a message!</p>
-                </header>
-                <div class="box">
-                    <form method="post" action="https://formspree.io/xgeznrgp">
-                        <div class="row gtr-50 gtr-uniform">
-                            <div class="col-6 col-12-mobilep">
-                                <input type="text" name="name" id="name" value="" placeholder="Name" />
+            <main class="page-content narrow">
+                <section class="section" id="contact">
+                    <div class="section__header">
+                        <h1>Let's connect</h1>
+                        <p>Use the form below or email <a href="mailto:jesshe21@berkeley.edu">jesshe21@berkeley.edu</a>.</p>
+                    </div>
+                    <div class="form-card">
+                        <form method="post" action="https://formspree.io/xgeznrgp">
+                            <div class="form-field">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" placeholder="Your name" />
                             </div>
-                            <div class="col-6 col-12-mobilep">
-                                <input type="email" name="email" id="email" value="" placeholder="Email" />
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="you@example.com" />
                             </div>
-                            <div class="col-12">
-                                <input type="text" name="subject" id="subject" value="" placeholder="Subject" />
+                            <div class="form-field">
+                                <label for="subject">Subject</label>
+                                <input type="text" name="subject" id="subject" placeholder="What would you like to chat about?" />
                             </div>
-                            <div class="col-12">
-                                <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+                            <div class="form-field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" placeholder="Share a few details so I can respond thoughtfully." rows="6"></textarea>
                             </div>
-                            <div class="col-12">
-                                <ul class="actions special">
-                                    <li><input type="submit" value="Send Message" /></li>
-                                </ul>
+                            <div class="form-actions">
+                                <button type="submit" class="button button--primary">Send message</button>
                             </div>
-                        </div>
-                    </form>
-                </div>
-            </section>
+                        </form>
+                    </div>
+                </section>
+            </main>
 
-			<!-- Footer -->
             {% include footer.html %}
 
-		</div>
+        </div>
 
-		<!-- Scripts -->
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.dropotron.min.js"></script>
         <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -57,5 +55,5 @@ description: Use this form to shoot me a message!
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
 
-	</body>
+    </body>
 </html>
