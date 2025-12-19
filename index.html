@@ -1,160 +1,179 @@
----
-title: Jessica He
-permalink: /
-description: Welcome to Jessica's website!
----
 <!DOCTYPE HTML>
-<html>
-{% include head.html %}
-<body class="landing is-preload">
-    <div id="page-wrapper">
+<html lang="en">
 
-        <!-- Header -->
-        {% include header.html %}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Jessica He</title>
+    <meta name="description" content="Welcome to Jessica's website!" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-        <!-- Banner -->
-        <section id="banner">
-            <h2>Jessica He</h2>
-            <p>Finance professional with experience in strategic finance and investment banking</p>
-        </section>
-
-        <!-- Main -->
-        <section id="main" class="container">
-
-            <section class="box">
-                <header>
-                    <h2>About</h2>
-                </header>
-                <p>I grew up in Rochester, MN, where Mayo Clinic and IBM shaped the local landscape. After high school, I ventured 1,800 miles west to attend UC Berkeley.</p>
-
-                <p>At Berkeley, I taught origami, interned in Ireland, and explored diverse career paths through various student organizations. These experiences helped me discover my passion for finance and strategic problem-solving.</p>
-
-                <p>Since graduating, I've been working in finance in San Francisco, most recently at Bolt Financial in strategic finance. Previously, I worked in investment banking at Goldman Sachs focusing on technology, media, and telecommunications.</p>
-
-                <p>I'd love to connect. Reach me at <a href="mailto:jesshe21@berkeley.edu">jesshe21@berkeley.edu</a>.</p>
-            </section>
-            <section class="box">
-                <div class="row gtr-uniform gtr-50">
-                    <div class="col-6">
-                        <span class="image fit"><img src="images/grad-pic.jpg" alt="" /></span>
-                    </div>
-                    <div class="col-6">
-                        <span class="image fit"><img src="images/greece.jpg" alt="" /></span>
-                    </div>
-                </div>
-            </section>
-            <section class="box">
-                <header>
-                    <h2>Experience</h2>
-                </header>
-                <header>
-                    <h3>Education</h3>
-                </header>
-                <ul class="alt">
-                    {% for education in site.data.educations %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ education.school }}</b></span>
-                        </div>
-                        <div class="row">
-                            <span><i>{{ education.degree }}</i></span>
-                            <span>{{ education.date }}</span>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <header>
-                    <h3>Professional Experience</h3>
-                </header>
-                <ul class="alt">
-                    {% for experience in site.data.experiences %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ experience.org }}</b></span>
-                            <span><b>{{ experience.location }}</b></span>
-                        </div>
-                        <div class="row">
-                            <span><i>{{ experience.position }}</i></span>
-                            <span>{{ experience.date }}</span>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <!-- <header>
-                    <h3>Projects</h3>
-                </header>
-                <ul class="alt">
-                    {% for project in site.data.projects %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ project.client }}</b></span>
-                        </div>
-                        <div class="row">
-                            <span><i>{{ project.name }}</i></span>
-                            <span>{{ project.date }}</span>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul> -->
-                <!-- <header>
-                    <h3>Leadership & Extracurriculars</h3>
-                </header>
-                <ul class="alt">
-                    {% for extra in site.data.extras %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ extra.org }}</b></span>
-                            <span><b>{{ extra.location }}</b></span>
-                        </div>
-                        <div class="row">
-                            <span><i>{{ extra.position }}</i></span>
-                            <span>{{ extra.date }}</span>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul> -->
-                <header>
-                    <h3>Awards</h3>
-                </header>
-                <ul class="alt">
-                    {% for award in site.data.awards %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ award.name }}</b></span>
-                            <span>{{ award.date }}</span>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <header>
-                    <h3>Interests</h3>
-                </header>
-                <ul class="alt">
-                    {% for interest in site.data.interests %}
-                    <li>
-                        <div class="row">
-                            <span><b>{{ interest.name }}</b></span>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </section>
-
-        </section>
-
-        <!-- Footer -->
-        {% include footer.html %}
-
+<body>
+    <!-- Loading Animation Screen -->
+    <div id="loading-screen">
+        <svg id="jh-animation" width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Single continuous line drawing of JH -->
+            <path id="jh-path"
+                d="M 75 50 L 75 125 Q 75 145 55 145 Q 35 145 35 125 M 130 50 L 130 145 M 130 97 L 185 97 M 185 50 L 185 145"
+                stroke="#2a2a2a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-dasharray="1000" stroke-dashoffset="1000" />
+        </svg>
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <a href="#about">About Me</a>
+        <a href="#experience">Experience</a>
+        <a href="#origami">Origami</a>
+        <a href="#contact">Say Hi</a>
+        <div class="nav-icons">
+            <div class="color-picker-wrapper">
+                <input type="color" id="bg-color-picker" value="#dd9292">
+                <svg class="color-picker-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M20.71 3.29a2.5 2.5 0 0 0-3.54 0l-1.41 1.41-1.42-1.41a1 1 0 0 0-1.41 1.41l1.41 1.42-8.49 8.49c-.29.29-.52.64-.67 1.03l-1.11 2.78a1 1 0 0 0 .92 1.37c.13 0 .26-.03.39-.08l2.78-1.11c.39-.15.74-.38 1.03-.67l8.49-8.49 1.42 1.41a1 1 0 0 0 1.41-1.41l-1.41-1.42 1.41-1.41a2.5 2.5 0 0 0 0-3.54zM8.29 16.29l-1.65.66.66-1.65 7.79-7.79 1 1-7.8 7.78z" />
+                </svg>
+            </div>
+            <a href="https://www.linkedin.com/in/jesshe21/" target="_blank" rel="noopener noreferrer"
+                class="nav-linkedin-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                    stroke="none">
+                    <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+            </a>
+        </div>
+    </nav>
 
+    <!-- Welcome Section -->
+    <section id="welcome">
+        <div class="welcome-text">
+            <h1>Hi, I'm Jess He!</h1>
+            <p>welcome to my website</p>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I grew up in cozy Rochester, MN, sandwiched between the two large employers in town: Mayo Clinic
+                    (where my mom worked) and IBM (where my dad worked). Eager to escape the cold, I moved 1800 miles
+                    west to attend Berkeley.</p>
+                <p>Of my time in college, I fondly remember teaching an origami course, interning in Ireland, and
+                    bombarding Sproul Plaza passersby with free Exo cricket bars as a campus ambassador.</p>
+                <p>Today I work in VC in San Francisco. If you'd like to chat or meet for coffee, I would love to hear
+                    from you at <a href="mailto:jessh1821@gmail.com">jessh1821@gmail.com</a>!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+
+            <div class="experience-category">
+                <h3>Education</h3>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-title">University of California, Berkeley</span>
+                        <span class="exp-date">Aug 2017 - May 2021</span>
+                    </div>
+                    <div class="exp-subtitle">B.A. Operations Research and Management Science</div>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-title">University of California, Berkeley, Haas School of Business</span>
+                        <span class="exp-date">Aug 2019 - May 2021</span>
+                    </div>
+                    <div class="exp-subtitle">B.S. Business Administration</div>
+                </div>
+            </div>
+
+            <div class="experience-category">
+                <h3>Professional Experience</h3>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-title">DCM</span>
+                        <span class="exp-date">Nov 2024 - Present</span>
+                    </div>
+                    <div class="exp-subtitle">Investor • San Francisco, CA</div>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Bolt Financial</span>
+                        <span class="exp-date">May 2022 - Nov 2024</span>
+                    </div>
+                    <div class="exp-subtitle">Strategic Finance • San Francisco, CA</div>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Goldman Sachs & Co.</span>
+                        <span class="exp-date">Jul 2021 - Apr 2022</span>
+                    </div>
+                    <div class="exp-subtitle">Investment Banking Analyst, TMT • San Francisco, CA</div>
+                </div>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <span class="exp-title">Tesla Inc.</span>
+                        <span class="exp-date">Jan 2021 - May 2021</span>
+                    </div>
+                    <div class="exp-subtitle">Global Supply Chain Intern | Battery • Palo Alto, CA</div>
+                </div>
+            </div>
+
+            <div class="experience-category">
+                <h3>Awards</h3>
+                <p class="awards-list">Finalist Farallon Capital Management Investment Case Comp • 1st Place Goldman
+                    Sachs Investment Banking Case Comp • 1st Place Deutsche Bank Powering Progress Case Comp • Cal
+                    Alumni Leadership Award • Mayo Clinic Young Volunteer Scholarship</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Origami Section -->
+    <section id="origami">
+        <div class="container">
+            <h2>Origami</h2>
+            <div class="origami-gallery">
+                <img src="images/origami/peacock.jpg" alt="Origami peacock" />
+                <img src="images/origami/color_wheel.jpg" alt="Origami color wheel" />
+                <img src="images/origami/giraffe.jpg" alt="Origami giraffe" />
+                <img src="images/origami/swan.jpg" alt="Origami swan" />
+                <img src="images/origami/turtle.jpg" alt="Origami turtle" />
+                <img src="images/origami/kirby.jpg" alt="Origami Kirby" />
+                <img src="images/origami/panda.jpg" alt="Origami panda" />
+                <img src="images/origami/penguin.jpg" alt="Origami penguin" />
+                <img src="images/origami/fox.jpg" alt="Origami fox" />
+                <img src="images/origami/geometry.jpg" alt="Origami geometry" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Say Hi</h2>
+            <p class="contact-intro">I'd love to hear from you</p>
+            <form method="post" action="https://formspree.io/xgeznrgp" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name" required />
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <input type="text" name="subject" placeholder="Subject" required />
+                <textarea name="message" placeholder="Your message" rows="6" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

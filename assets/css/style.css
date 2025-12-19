@@ -1,0 +1,671 @@
+/* ===========================
+   Google Fonts Import
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Work+Sans:wght@300;400;500&display=swap');
+
+/* ===========================
+   Reset & Base Styles
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2a2a2a;
+    background-color: #F9F7F2;
+    overflow-x: hidden;
+}
+
+/* ===========================
+   Loading Animation
+   =========================== */
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #dd9292;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#jh-animation {
+    max-width: 90%;
+    height: auto;
+}
+
+#jh-path {
+    stroke: #2a2a2a;
+}
+
+/* ===========================
+   Navigation
+   =========================== */
+
+#main-nav {
+    position: fixed;
+    top: 40px;
+    right: 80px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 18px 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 8px;
+}
+
+#main-nav a {
+    color: #F9F7F2;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    transition: all 0.3s ease;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #F9F7F2;
+    transition: width 0.3s ease;
+}
+
+#main-nav a:hover {
+    opacity: 0.7;
+}
+
+#main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Navigation changes on scroll */
+body.scrolled #main-nav {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+body.scrolled #main-nav a {
+    color: #2a2a2a;
+}
+
+body.scrolled #main-nav a::after {
+    background-color: #dd9292;
+}
+
+/* ===========================
+   Welcome Section
+   =========================== */
+
+#welcome {
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 80px 100px 140px;
+    background: #dd9292;
+    position: relative;
+}
+
+.color-picker-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.color-picker-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #F9F7F2;
+    transition: width 0.3s ease;
+}
+
+.color-picker-wrapper:hover::after {
+    width: 100%;
+}
+
+.color-picker-icon {
+    width: 18px;
+    height: 18px;
+    color: #F9F7F2;
+    pointer-events: none;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+#bg-color-picker {
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.color-picker-wrapper:hover .color-picker-icon {
+    opacity: 0.7;
+}
+
+.nav-icons {
+    position: relative;
+}
+
+.nav-linkedin-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #F9F7F2;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-linkedin-icon::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #F9F7F2;
+    transition: width 0.3s ease;
+}
+
+.nav-linkedin-icon:hover {
+    opacity: 0.7;
+}
+
+.nav-linkedin-icon:hover::after {
+    width: 100%;
+}
+
+.welcome-text {
+    max-width: 700px;
+}
+
+.welcome-text h1 {
+    font-size: 56px;
+    font-weight: 300;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    color: #F9F7F2;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.welcome-text p {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(249, 247, 242, 0.85);
+    letter-spacing: 0.8px;
+    margin-bottom: 20px;
+}
+
+.linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #F9F7F2;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.linkedin-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   Sections
+   =========================== */
+
+section {
+    min-height: auto;
+    padding: 80px 0 80px;
+    position: relative;
+}
+
+section:not(#welcome)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #dd9292, transparent);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    letter-spacing: 0.5px;
+    color: #2a2a2a;
+    font-family: 'Work Sans', sans-serif;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 35px;
+    letter-spacing: 0.3px;
+    color: #dd9292;
+}
+
+/* ===========================
+   About Section
+   =========================== */
+
+#about {
+    background-color: #F9F7F2;
+}
+
+.about-content {
+    max-width: 1200px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    line-height: 1.9;
+    color: #3a3a3a;
+    font-size: 17px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.about-content a {
+    color: #dd9292;
+    text-decoration: none;
+    border-bottom: 1px solid #dd9292;
+    transition: opacity 0.3s ease;
+}
+
+.about-content a:hover {
+    opacity: 0.7;
+}
+
+/* ===========================
+   Experience Section
+   =========================== */
+
+#experience {
+    background-color: #ffffff;
+}
+
+.experience-category {
+    margin-bottom: 35px;
+}
+
+.experience-category:last-child {
+    margin-bottom: 0;
+}
+
+.experience-item {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e8e6e0;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+    gap: 20px;
+}
+
+.exp-title {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.exp-date {
+    font-size: 15px;
+    color: #888;
+    white-space: nowrap;
+}
+
+.exp-subtitle {
+    font-size: 16px;
+    color: #555;
+}
+
+.awards-list {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #3a3a3a;
+}
+
+/* ===========================
+   Origami Section
+   =========================== */
+
+#origami {
+    background-color: #F9F7F2;
+}
+
+.origami-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.origami-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 12px rgba(221, 146, 146, 0.15);
+    border: 1px solid rgba(221, 146, 146, 0.12);
+}
+
+.origami-gallery img:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(221, 146, 146, 0.25);
+    border-color: rgba(221, 146, 146, 0.3);
+}
+
+/* ===========================
+   Contact Section
+   =========================== */
+
+#contact {
+    min-height: auto;
+    padding: 80px 0 80px;
+    background: linear-gradient(135deg, #F9F7F2 0%, #f0ede5 100%);
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 100px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 46px;
+    margin-bottom: 22px;
+}
+
+.contact-intro {
+    margin-bottom: 55px;
+    color: #555;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+}
+
+.contact-form {
+    max-width: 100%;
+    text-align: left;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 20px 26px;
+    border: 1px solid #d9d4cc;
+    border-radius: 12px;
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 15px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    margin-bottom: 24px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #dd9292;
+    box-shadow: 0 0 0 4px rgba(221, 146, 146, 0.12);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 15px;
+}
+
+.contact-form button {
+    padding: 20px 70px;
+    background-color: #dd9292;
+    color: #2a2a2a;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.contact-form button:hover {
+    background-color: #d17f7f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(221, 146, 146, 0.35);
+}
+
+.contact-form button:active {
+    transform: translateY(0);
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+@media screen and (max-width: 1024px) {
+
+    .container,
+    .contact-container {
+        padding: 0 60px;
+    }
+
+    #welcome {
+        padding: 80px 60px 120px;
+    }
+
+    #main-nav {
+        right: 60px;
+    }
+
+    .color-picker-container {
+        right: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main-nav {
+        top: 20px;
+        right: 20px;
+        gap: 12px;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 15px 20px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+    }
+
+    #main-nav a {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    body.scrolled #main-nav {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .color-picker-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    #bg-color-picker {
+        width: 22px;
+        height: 22px;
+    }
+
+    .nav-linkedin-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .nav-icons {
+        gap: 6px;
+        margin-top: 6px;
+        padding-top: 6px;
+    }
+
+    #welcome {
+        padding: 60px 30px 80px;
+    }
+
+    .welcome-text h1 {
+        font-size: 42px;
+    }
+
+    .welcome-text p {
+        font-size: 18px;
+    }
+
+    .container,
+    .contact-container {
+        padding: 0 30px;
+    }
+
+    section {
+        padding: 80px 0 80px;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    h3 {
+        font-size: 22px;
+        margin-top: 30px;
+    }
+
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .form-group {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .origami-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 16px;
+    }
+
+    .origami-gallery img {
+        height: 160px;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .welcome-text h1 {
+        font-size: 34px;
+    }
+
+    .welcome-text p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .origami-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
+    }
+
+    .origami-gallery img {
+        height: 130px;
+    }
+}
