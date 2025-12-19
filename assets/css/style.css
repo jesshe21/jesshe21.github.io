@@ -538,6 +538,8 @@ h3 {
     }
 
     #welcome {
+        height: 100svh;
+        min-height: -webkit-fill-available;
         padding: 80px 60px 120px;
     }
 
