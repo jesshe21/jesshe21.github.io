@@ -185,9 +185,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.querySelectorAll('#main-nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+
+        // Only handle internal anchor links, let external links work normally
+        if (!targetId.startsWith('#')) {
+            return;
+        }
+
         e.preventDefault();
 
-        const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
 
         if (targetSection) {
