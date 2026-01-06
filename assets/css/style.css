@@ -415,7 +415,8 @@ h3 {
     position: relative;
     display: flex;
     gap: 14px;
-    padding: 20px 0;
+    padding: 16px 0;
+    margin-bottom: 8px;
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
@@ -423,15 +424,6 @@ h3 {
     animation: fadeSlideIn 0.5s ease forwards;
 }
 
-.exp-item::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50px;
-    right: 50px;
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.06), transparent);
-}
 
 .exp-item:nth-child(1) { animation-delay: 0.1s; }
 .exp-item:nth-child(2) { animation-delay: 0.15s; }
@@ -449,10 +441,6 @@ h3 {
     }
 }
 
-
-.exp-item:hover::after {
-    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
-}
 
 .exp-item:hover .item-company {
     color: #2a2a2a;
@@ -484,12 +472,6 @@ h3 {
     vertical-align: middle;
 }
 
-/* Hide divider on last item in each column */
-.item-grid .exp-item:nth-child(2)::after,
-.item-grid .exp-item:nth-child(4)::after,
-.item-grid .exp-item:last-child::after {
-    display: none;
-}
 
 .item-logo {
     width: 40px;
