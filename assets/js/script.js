@@ -131,7 +131,9 @@ document.addEventListener('DOMContentLoaded', function() {
             body.scrolled .color-picker-wrapper::after { background-color: ${accentColor} !important; }
             body.scrolled .nav-linkedin-icon { color: #2a2a2a !important; }
             body.scrolled .nav-linkedin-icon::after { background-color: ${accentColor} !important; }
-            h3 { color: ${accentColor} !important; }
+            h3:not(.category-title) { color: ${accentColor} !important; }
+            .category-title { color: ${accentColor} !important; }
+            .category-icon { color: ${accentColor} !important; }
             .about-content a {
                 color: ${accentColor} !important;
                 border-bottom-color: ${accentColor} !important;

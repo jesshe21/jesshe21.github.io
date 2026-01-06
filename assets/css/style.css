@@ -376,27 +376,31 @@ h3 {
 .category-header {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     margin-bottom: 8px;
 }
 
 .category-icon {
-    color: #9a9a9a;
+    color: #dd9292;
+    display: flex;
+    align-items: center;
 }
 
 .category-icon svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     stroke-width: 1.5;
 }
 
 .category-title {
-    font-family: 'Cormorant', serif;
-    font-size: 22px;
-    font-weight: 400;
-    color: #2a2a2a;
-    letter-spacing: -0.01em;
+    font-family: 'Karla', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #dd9292;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     margin: 0;
+    line-height: 1;
 }
 
 /* Item Grid */
@@ -411,13 +415,22 @@ h3 {
     position: relative;
     display: flex;
     gap: 14px;
-    padding: 12px 0;
+    padding: 20px 0;
     text-decoration: none;
     color: inherit;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
     opacity: 0;
     animation: fadeSlideIn 0.5s ease forwards;
+}
+
+.exp-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    right: 50px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.06), transparent);
 }
 
 .exp-item:nth-child(1) { animation-delay: 0.1s; }
@@ -436,17 +449,18 @@ h3 {
     }
 }
 
-.exp-item:hover {
-    border-color: rgba(0, 0, 0, 0.15);
+
+.exp-item:hover::after {
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
 }
 
 .exp-item:hover .item-company {
-    color: #dd9292;
+    color: #2a2a2a;
 }
 
 .exp-item:hover .item-logo img {
     opacity: 1;
-    filter: grayscale(0);
+    transform: scale(1.05);
 }
 
 .exp-item:hover .item-arrow {
@@ -495,9 +509,9 @@ h3 {
     width: 28px;
     height: 28px;
     object-fit: contain;
-    opacity: 0.5;
-    filter: grayscale(1);
-    transition: opacity 0.3s ease, filter 0.3s ease;
+    opacity: 0.85;
+    filter: grayscale(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .item-body {
