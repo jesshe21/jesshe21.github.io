@@ -468,32 +468,27 @@ h3 {
     transform: translate(2px, -2px);
 }
 
-/* Status Badge */
-.status-badge {
-    position: absolute;
-    top: 12px;
-    right: 0;
-    display: flex;
+/* Current Badge (inline) */
+.current-badge {
+    display: inline-flex;
     align-items: center;
-    gap: 5px;
-    font-size: 10px;
+    margin-left: 8px;
+    padding: 2px 8px;
+    font-size: 9px;
     font-weight: 500;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #6b9080;
+    background: rgba(107, 144, 128, 0.1);
+    border-radius: 10px;
+    vertical-align: middle;
 }
 
-.status-dot {
-    width: 5px;
-    height: 5px;
-    background: #6b9080;
-    border-radius: 50%;
-    animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
+/* Hide divider on last item in each column */
+.item-grid .exp-item:nth-child(2)::after,
+.item-grid .exp-item:nth-child(4)::after,
+.item-grid .exp-item:last-child::after {
+    display: none;
 }
 
 .item-logo {
