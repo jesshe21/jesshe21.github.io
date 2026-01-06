@@ -2,7 +2,7 @@
    Google Fonts Import
    =========================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Work+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300&family=Karla:wght@300;400;500&display=swap');
 
 /* ===========================
    Reset & Base Styles
@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #2a2a2a;
@@ -71,10 +71,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 14px;
+    gap: 6px;
     background: rgba(255, 255, 255, 0.15);
-    padding: 18px 25px;
-    border-radius: 12px;
+    padding: 12px 18px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
 }
 
@@ -234,11 +234,11 @@ body.scrolled #main-nav a::after {
 
 .welcome-text h1 {
     font-size: 56px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 12px;
     letter-spacing: 0.5px;
     color: #F9F7F2;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Cormorant', serif;
 }
 
 .welcome-text p {
@@ -277,16 +277,6 @@ section {
     position: relative;
 }
 
-section:not(#welcome)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(to right, transparent, #dd9292, transparent);
-}
 
 .container {
     max-width: 1200px;
@@ -296,11 +286,11 @@ section:not(#welcome)::before {
 
 h2 {
     font-size: 42px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 50px;
     letter-spacing: 0.5px;
     color: #2a2a2a;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Cormorant', serif;
 }
 
 h3 {
@@ -445,85 +435,147 @@ h3 {
 }
 
 .contact-container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 100px;
-    text-align: center;
+}
+
+.contact-subtitle {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #a8a8a8;
+    margin-bottom: 8px;
 }
 
 .contact-container h2 {
-    font-size: 46px;
-    margin-bottom: 22px;
-}
-
-.contact-intro {
-    margin-bottom: 55px;
-    color: #555;
-    font-size: 19px;
-    letter-spacing: 0.5px;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    font-family: 'Cormorant', serif;
 }
 
 .contact-form {
     max-width: 100%;
-    text-align: left;
 }
 
 .form-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 24px;
+    gap: 32px;
+    margin-bottom: 0;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 20px 26px;
-    border: 1px solid #d9d4cc;
-    border-radius: 12px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #d4d4d4;
+    border-radius: 0;
     font-family: 'Inter', -apple-system, sans-serif;
-    font-size: 15px;
-    background-color: #ffffff;
-    transition: all 0.3s ease;
-    margin-bottom: 24px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    background-color: transparent;
+    transition: border-color 0.5s ease;
+    margin-bottom: 0;
+    color: #2a2a2a;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #a8a8a8;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #dd9292;
-    box-shadow: 0 0 0 4px rgba(221, 146, 146, 0.12);
+    border-bottom-color: #2a2a2a;
+    box-shadow: none;
 }
 
 .contact-form textarea {
-    resize: vertical;
+    resize: none;
     font-family: 'Inter', -apple-system, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
+    margin-top: 16px;
 }
 
-.contact-form button {
-    padding: 20px 70px;
-    background-color: #dd9292;
-    color: #2a2a2a;
+.send-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0;
+    margin-top: 20px;
+    background: transparent !important;
+    background-color: transparent !important;
     border: none;
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    color: #2a2a2a;
+    transition: color 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.send-button span {
+    font-size: 11px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin-top: 10px;
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-weight: 400;
+    background: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.contact-form button:hover {
-    background-color: #d17f7f;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(221, 146, 146, 0.35);
+.send-button::selection,
+.send-button span::selection,
+.send-button *::selection {
+    background: transparent;
 }
 
-.contact-form button:active {
-    transform: translateY(0);
+.send-button::-moz-selection,
+.send-button span::-moz-selection,
+.send-button *::-moz-selection {
+    background: transparent;
+}
+
+.send-button svg {
+    transition: transform 0.3s ease;
+    background: transparent;
+}
+
+.send-button:hover {
+    color: #dd9292;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.send-button:hover span {
+    background: transparent;
+}
+
+.send-button:hover svg {
+    transform: translateX(8px);
+    background: transparent;
+}
+
+.send-button:focus {
+    outline: none;
+    background: transparent !important;
+}
+
+.send-button:active {
+    background: transparent !important;
 }
 
 /* ===========================
@@ -556,10 +608,10 @@ h3 {
     #main-nav {
         top: 20px;
         right: 20px;
-        gap: 12px;
-        background: rgba(0, 0, 0, 0.3);
-        padding: 15px 20px;
-        border-radius: 12px;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 12px 18px;
+        border-radius: 10px;
         backdrop-filter: blur(10px);
     }
 
@@ -634,7 +686,15 @@ h3 {
 
     .form-group {
         grid-template-columns: 1fr;
-        gap: 0;
+        gap: 24px;
+    }
+
+    .contact-container {
+        padding: 0 30px;
+    }
+
+    .contact-container h2 {
+        font-size: 40px;
     }
 
     .origami-gallery {
@@ -646,9 +706,6 @@ h3 {
         height: 160px;
     }
 
-    .contact-form button {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 480px) {

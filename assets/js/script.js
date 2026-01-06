@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 border-bottom-color: ${accentColor} !important;
             }
             section:not(#welcome)::before {
-                background: linear-gradient(to right, transparent, ${accentColor}, transparent) !important;
+                color: ${accentColor} !important;
             }
             #main-nav a::after {
                 background-color: ${accentColor} !important;
@@ -158,13 +158,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 border-color: ${accentColor} !important;
                 box-shadow: 0 0 0 4px ${accentColor}22 !important;
             }
-            .contact-form button {
-                background-color: ${accentColor} !important;
-                color: ${buttonTextColor} !important;
+            .contact-form .send-button {
+                background: transparent !important;
+                background-color: transparent !important;
+                color: #2a2a2a !important;
             }
-            .contact-form button:hover {
-                background-color: ${accentColor}dd !important;
-                box-shadow: 0 8px 20px ${accentColor}66 !important;
+            .contact-form .send-button:hover {
+                background: transparent !important;
+                background-color: transparent !important;
+                box-shadow: none !important;
+                color: ${accentColor} !important;
             }
         `;
     }

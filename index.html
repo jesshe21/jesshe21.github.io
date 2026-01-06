@@ -26,7 +26,7 @@
         <a href="#about">About Me</a>
         <a href="#experience">Experience</a>
         <a href="#origami">Origami</a>
-        <a href="https://jesshe21.substack.com/profile/posts" target="_blank" rel="noopener noreferrer">Notes</a>
+        <a href="https://jesshe21.substack.com/profile/posts" target="_blank" rel="noopener noreferrer">Whims</a>
         <a href="#contact">Say Hi</a>
         <div class="nav-icons">
             <div class="color-picker-wrapper">
@@ -159,16 +159,20 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="contact-container">
+            <p class="contact-subtitle">I'd love to hear from you</p>
             <h2>Say Hi</h2>
-            <p class="contact-intro">I'd love to hear from you</p>
             <form method="post" action="https://formspree.io/xgeznrgp" class="contact-form">
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Name" required />
                     <input type="email" name="email" placeholder="Email" required />
                 </div>
-                <input type="text" name="subject" placeholder="Subject" required />
-                <textarea name="message" placeholder="Your message" rows="6" required></textarea>
-                <button type="submit">Send</button>
+                <textarea name="message" placeholder="Message" rows="3" required></textarea>
+                <button type="submit" class="send-button">
+                    <span>Send</span>
+                    <svg width="24" height="8" viewBox="0 0 24 8" fill="none">
+                        <path d="M23.35 4.35a.5.5 0 000-.7L20.17.47a.5.5 0 10-.7.7L22.29 4l-2.83 2.83a.5.5 0 10.7.7l3.19-3.18zM0 4.5h23v-1H0v1z" fill="currentColor"/>
+                    </svg>
+                </button>
             </form>
         </div>
     </section>
