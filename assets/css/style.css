@@ -657,7 +657,7 @@ h3 {
     border: none;
     border-bottom: 1px solid #d4d4d4;
     border-radius: 0;
-    font-family: 'Inter', -apple-system, sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 14px;
     letter-spacing: 0.5px;
     background-color: transparent;
@@ -680,7 +680,7 @@ h3 {
 
 .contact-form textarea {
     resize: none;
-    font-family: 'Inter', -apple-system, sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 14px;
     margin-top: 16px;
 }
